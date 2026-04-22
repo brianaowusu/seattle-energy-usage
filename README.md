@@ -14,19 +14,8 @@ The goal is to demonstrate data engineering and analytics skills, including ETL 
 
 ---
 
-## 🏗️ Architecture
-Raw Data (CSV)
-↓
-Python ETL (Cleaning + Validation)
-↓
-SQLite Database
-↓
-SQL KPI Queries
-↓
-CSV Exports
-↓
-Tableau Dashboard
-
+## 📊 Tableau Dashboard
+(https://public.tableau.com/views/SeattleEnergyUse/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 ---
 
@@ -36,33 +25,6 @@ Tableau Dashboard
 - SQL (SQLite)
 - Tableau Public
 - Git
-
----
-
-## 📂 Project Structure
-
-
-energy-benchmark-pipeline/
-│
-├── data/
-│ ├── raw/ # Original dataset
-│ ├── cleaned/ # Cleaned data
-│ ├── analytics/ # KPI outputs for Tableau
-│
-├── scripts/
-│ ├── data_cleaning.py
-│ ├── data_validation.py
-│ ├── load_to_sql.py
-│ ├── export_to_csv.py
-│ ├── etl_pipeline_runner.py
-│
-├── sql/
-│ ├── create_tables.sql
-│ ├── kpi_queries.sql
-│
-├── data_visualizations/
-│   ├── tableau_visualization_example.png
-└── README.md
 
 
 ---
@@ -102,7 +64,7 @@ energy-benchmark-pipeline/
 
 ---
 
-## 📈 Results & Insights
+## 🔍 Key Insights
 
 - Identified significant variation in energy usage across building types  
 - Found that a small subset of buildings contributes disproportionately to total emissions  
@@ -111,24 +73,12 @@ energy-benchmark-pipeline/
 
 ---
 
-## 🚀 How to Run
+## 🚀 How to Run the project
 
 1. Clone the repository  
 2. Place raw dataset in `data/raw/`  
-3. Run the pipeline:
-
-python scripts/etl_pipeline_runner.py
-
-
-4. Open Tableau Public and connect to files in:
-
-data/analytics/
-
----
-
-## 📊 Dashboard
-
-(https://public.tableau.com/views/SeattleEnergyUse/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+3. Run the pipeline: `python scripts/etl_pipeline_runner.py`
+4. Open Tableau Public and connect to files in `data/analytics/`
 
 ---
 
