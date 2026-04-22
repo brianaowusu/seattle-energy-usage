@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8' ?>
 
 <!-- build 20261.26.0226.1626                               -->
-<workbook original-version='18.1' source-build='2026.1.0 (20261.26.0226.1626)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+<workbook original-version='18.1' source-build='2026.1.0 (20261.26.0226.1626)' source-platform='mac' version='18.1' xml:base='http://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
   <document-format-change-manifest>
     <AccessibleZoneTabOrder />
     <AnimationOnByDefault />
@@ -18,7 +18,9 @@
     <SortTagCleanup />
     <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
     <WindowsPersistSimpleIdentifiers />
+    <WorkbookOptimizerRuleConfig />
   </document-format-change-manifest>
+  <repository-location id='seattle_energy_usage' path='/workbooks' revision='1.1' />
   <preferences>
     <preference name='ui.encoding.shelf.height' value='24' />
     <preference name='ui.shelf.height' value='26' />
@@ -34,121 +36,6 @@
     </color-palette>
   </preferences>
   <datasources>
-    <datasource caption='Average_Emissions_by_property_type' inline='true' name='federated.0t1dota1sowkrp11wfv6a1u5e31u' version='18.1'>
-      <connection class='federated'>
-        <named-connections>
-          <named-connection caption='Average_Emissions_by_property_type' name='textscan.1m37vqf0fyin9c14fs6sy1b89tjm'>
-            <connection class='textscan' directory='/Users/bri/Downloads/seattle-energy-usage/data' filename='Average_Emissions_by_property_type.csv' password='' server='' workgroup-auth-mode='as-is' />
-          </named-connection>
-        </named-connections>
-        <relation connection='textscan.1m37vqf0fyin9c14fs6sy1b89tjm' name='Average_Emissions_by_property_type.csv' table='[Average_Emissions_by_property_type#csv]' type='table'>
-          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
-            <column datatype='integer' name='year' ordinal='0' />
-            <column datatype='real' name='total_emissions' ordinal='1' />
-          </columns>
-        </relation>
-        <metadata-records>
-          <metadata-record class='capability'>
-            <remote-name />
-            <remote-type>0</remote-type>
-            <parent-name>[Average_Emissions_by_property_type.csv]</parent-name>
-            <remote-alias />
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
-              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
-              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
-              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
-              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
-              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>year</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[year]</local-name>
-            <parent-name>[Average_Emissions_by_property_type.csv]</parent-name>
-            <remote-alias>year</remote-alias>
-            <ordinal>0</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <object-id>[Average_Emissions_by_property_type.csv_D5DA80186F374AFBB9E260123BC0E1CB]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>total_emissions</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[total_emissions]</local-name>
-            <parent-name>[Average_Emissions_by_property_type.csv]</parent-name>
-            <remote-alias>total_emissions</remote-alias>
-            <ordinal>1</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <object-id>[Average_Emissions_by_property_type.csv_D5DA80186F374AFBB9E260123BC0E1CB]</object-id>
-          </metadata-record>
-        </metadata-records>
-      </connection>
-      <aliases enabled='yes' />
-      <column caption='Average_Emissions_by_property_type.csv' datatype='table' name='[__tableau_internal_object_id__].[Average_Emissions_by_property_type.csv_D5DA80186F374AFBB9E260123BC0E1CB]' role='measure' type='quantitative' />
-      <column caption='Total Emissions' datatype='real' name='[total_emissions]' role='measure' type='quantitative' />
-      <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
-      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
-        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/y2/rl2xxnnn5vs0rqbyqts6whnc0000gn/T/tableau-temp/#TableauTemp_0av9t2t0j6ob7a1ejm3us0aus7cl.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
-          <relation name='Extract' table='[Extract].[Extract]' type='table' />
-          <metadata-records>
-            <metadata-record class='column'>
-              <remote-name>year</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[year]</local-name>
-              <parent-name>[Extract]</parent-name>
-              <remote-alias>year</remote-alias>
-              <ordinal>0</ordinal>
-              <family>Average_Emissions_by_property_type.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>1</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>total_emissions</remote-name>
-              <remote-type>5</remote-type>
-              <local-name>[total_emissions]</local-name>
-              <parent-name>[Extract]</parent-name>
-              <remote-alias>total_emissions</remote-alias>
-              <ordinal>1</ordinal>
-              <family>Average_Emissions_by_property_type.csv</family>
-              <local-type>real</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>8</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-          </metadata-records>
-        </connection>
-      </extract>
-      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
-      <semantic-values>
-        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
-      </semantic-values>
-      <object-graph>
-        <objects>
-          <object caption='Average_Emissions_by_property_type.csv' id='Average_Emissions_by_property_type.csv_D5DA80186F374AFBB9E260123BC0E1CB'>
-            <properties context=''>
-              <relation connection='textscan.1m37vqf0fyin9c14fs6sy1b89tjm' name='Average_Emissions_by_property_type.csv' table='[Average_Emissions_by_property_type#csv]' type='table'>
-                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
-                  <column datatype='integer' name='year' ordinal='0' />
-                  <column datatype='real' name='total_emissions' ordinal='1' />
-                </columns>
-              </relation>
-            </properties>
-            <properties context='extract'>
-              <relation name='Extract' table='[Extract].[Extract]' type='table' />
-            </properties>
-          </object>
-        </objects>
-      </object-graph>
-    </datasource>
     <datasource caption='Average_efficiency_by_property_type' inline='true' name='federated.06ibob20hh56tq1e05lhz0id2qcw' version='18.1'>
       <connection class='federated'>
         <named-connections>
@@ -323,8 +210,8 @@
           <map key='[electricity_kwh]' value='[energy_usage_cleaned.csv].[electricity_kwh]' />
           <map key='[gross_floor_area]' value='[energy_usage_cleaned.csv].[gross_floor_area]' />
           <map key='[property_type (Average_Emissions_by_property_type.csv)]' value='[Average_Emissions_by_property_type.csv].[property_type]' />
-          <map key='[property_type (energy_usage_cleaned.csv)]' value='[energy_usage_cleaned.csv].[property_type]' />
-          <map key='[property_type]' value='[Average_efficiency_by_property_type.csv].[property_type]' />
+          <map key='[property_type (Average_efficiency_by_property_type.csv)]' value='[Average_efficiency_by_property_type.csv].[property_type]' />
+          <map key='[property_type]' value='[energy_usage_cleaned.csv].[property_type]' />
           <map key='[site_eui (Energy_efficient_buildings.csv)]' value='[Energy_efficient_buildings.csv].[site_eui]' />
           <map key='[site_eui (Energy_inefficient_buildings.csv)]' value='[Energy_inefficient_buildings.csv].[site_eui]' />
           <map key='[site_eui]' value='[energy_usage_cleaned.csv].[site_eui]' />
@@ -332,10 +219,10 @@
           <map key='[total_emissions (Average_Emissions_by_property_type.csv)]' value='[Average_Emissions_by_property_type.csv].[total_emissions]' />
           <map key='[total_emissions (energy_usage_cleaned.csv)]' value='[energy_usage_cleaned.csv].[total_emissions]' />
           <map key='[total_emissions]' value='[Average_Emissions_over_ti.csv].[total_emissions]' />
-          <map key='[year (Average_Emissions_over_ti.csv)]' value='[Average_Emissions_over_ti.csv].[year]' />
+          <map key='[year (energy_trend_over_time.csv)]' value='[energy_trend_over_time.csv].[year]' />
           <map key='[year (energy_trend_over_time.csv1)]' value='[energy_trend_over_time.csv1].[year]' />
           <map key='[year (energy_usage_cleaned.csv)]' value='[energy_usage_cleaned.csv].[year]' />
-          <map key='[year]' value='[energy_trend_over_time.csv].[year]' />
+          <map key='[year]' value='[Average_Emissions_over_ti.csv].[year]' />
         </cols>
         <metadata-records>
           <metadata-record class='capability'>
@@ -486,7 +373,7 @@
           <metadata-record class='column'>
             <remote-name>year</remote-name>
             <remote-type>20</remote-type>
-            <local-name>[year (Average_Emissions_over_ti.csv)]</local-name>
+            <local-name>[year]</local-name>
             <parent-name>[Average_Emissions_over_ti.csv]</parent-name>
             <remote-alias>year</remote-alias>
             <ordinal>0</ordinal>
@@ -1122,7 +1009,7 @@
           <metadata-record class='column'>
             <remote-name>property_type</remote-name>
             <remote-type>129</remote-type>
-            <local-name>[property_type (energy_usage_cleaned.csv)]</local-name>
+            <local-name>[property_type]</local-name>
             <parent-name>[energy_usage_cleaned.csv]</parent-name>
             <remote-alias>property_type</remote-alias>
             <ordinal>50</ordinal>
@@ -1261,7 +1148,7 @@
           <metadata-record class='column'>
             <remote-name>year</remote-name>
             <remote-type>20</remote-type>
-            <local-name>[year]</local-name>
+            <local-name>[year (energy_trend_over_time.csv)]</local-name>
             <parent-name>[energy_trend_over_time.csv]</parent-name>
             <remote-alias>year</remote-alias>
             <ordinal>61</ordinal>
@@ -1285,7 +1172,7 @@
           <metadata-record class='column'>
             <remote-name>property_type</remote-name>
             <remote-type>129</remote-type>
-            <local-name>[property_type]</local-name>
+            <local-name>[property_type (Average_efficiency_by_property_type.csv)]</local-name>
             <parent-name>[Average_efficiency_by_property_type.csv]</parent-name>
             <remote-alias>property_type</remote-alias>
             <ordinal>63</ordinal>
@@ -1363,79 +1250,94 @@
         </metadata-records>
       </connection>
       <aliases enabled='yes' />
-      <column caption='Building Name' datatype='string' name='[BuildingName]' role='dimension' type='nominal' />
-      <column caption='Building Type' datatype='string' name='[BuildingType]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[Address]' role='dimension' type='nominal' />
+      <column caption='Building Name' datatype='string' hidden='true' name='[BuildingName]' role='dimension' type='nominal' />
+      <column caption='Building Type' datatype='string' hidden='true' name='[BuildingType]' role='dimension' type='nominal' />
       <column caption='Calculation1' datatype='boolean' name='[Calculation_1447019321794560]' role='dimension' type='nominal'>
         <calculation class='tableau' formula='[avg_eui (Average_efficiency_by_property_type.csv)] &gt; 50' />
       </column>
-      <column caption='aver' datatype='boolean' name='[Calculation_1502544670253056]' role='dimension' type='nominal'>
+      <column caption='aver' datatype='boolean' hidden='true' name='[Calculation_1502544670253056]' role='dimension' type='nominal'>
         <calculation class='tableau' formula='[total_emissions (Average_Emissions_by_property_type.csv)] &lt; 500000' />
       </column>
-      <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
-      <column caption='Compliance Issue' datatype='string' name='[ComplianceIssue]' role='dimension' type='nominal' />
-      <column caption='Compliance Status' datatype='string' name='[ComplianceStatus]' role='dimension' type='nominal' />
-      <column caption='Council District Code' datatype='integer' name='[CouncilDistrictCode]' role='dimension' type='ordinal' />
-      <column caption='Data Year' datatype='integer' name='[DataYear]' role='dimension' type='quantitative' />
-      <column caption='ENERGYSTAR Score' datatype='integer' name='[ENERGYSTARScore]' role='measure' type='quantitative' />
-      <column caption='EPA Property Type' datatype='string' name='[EPAPropertyType]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Compliance Issue' datatype='string' hidden='true' name='[ComplianceIssue]' role='dimension' type='nominal' />
+      <column caption='Compliance Status' datatype='string' hidden='true' name='[ComplianceStatus]' role='dimension' type='nominal' />
+      <column caption='Council District Code' datatype='integer' hidden='true' name='[CouncilDistrictCode]' role='dimension' type='ordinal' />
+      <column caption='Data Year' datatype='integer' hidden='true' name='[DataYear]' role='dimension' type='quantitative' />
+      <column datatype='boolean' hidden='true' name='[Demolished]' role='dimension' type='nominal' />
+      <column caption='ENERGYSTAR Score' datatype='integer' hidden='true' name='[ENERGYSTARScore]' role='measure' type='quantitative' />
+      <column caption='EPA Property Type' datatype='string' hidden='true' name='[EPAPropertyType]' role='dimension' type='nominal' />
+      <column datatype='integer' hidden='true' name='[Electricity(kBtu)]' role='measure' type='quantitative' />
       <column datatype='integer' name='[Electricity(kWh)]' role='measure' type='quantitative' />
-      <column caption='GHG Emissions Intensity' datatype='real' name='[GHGEmissionsIntensity]' role='measure' type='quantitative' />
-      <column caption='Largest Property Use Type GFA' datatype='integer' name='[LargestPropertyUseTypeGFA]' role='measure' type='quantitative' />
-      <column caption='Largest Property Use Type' datatype='string' name='[LargestPropertyUseType]' role='dimension' type='nominal' />
-      <column aggregation='Avg' datatype='real' name='[Latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
-      <column aggregation='Avg' datatype='real' name='[Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='GHG Emissions Intensity' datatype='real' hidden='true' name='[GHGEmissionsIntensity]' role='measure' type='quantitative' />
+      <column caption='Largest Property Use Type GFA' datatype='integer' hidden='true' name='[LargestPropertyUseTypeGFA]' role='measure' type='quantitative' />
+      <column caption='Largest Property Use Type' datatype='string' hidden='true' name='[LargestPropertyUseType]' role='dimension' type='nominal' />
+      <column aggregation='Avg' datatype='real' hidden='true' name='[Latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' datatype='real' hidden='true' name='[Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column datatype='integer' hidden='true' name='[NaturalGas(kBtu)]' role='measure' type='quantitative' />
+      <column datatype='integer' hidden='true' name='[NaturalGas(therms)]' role='measure' type='quantitative' />
       <column datatype='string' name='[Neighborhood]' role='dimension' type='nominal' />
-      <column caption='Numberof Buildings' datatype='integer' name='[NumberofBuildings]' role='measure' type='quantitative' />
-      <column caption='Numberof Floors' datatype='integer' name='[NumberofFloors]' role='measure' type='quantitative' />
-      <column caption='OSE Building ID' datatype='integer' name='[OSEBuildingID]' role='dimension' type='ordinal' />
-      <column caption='Property GFA Buildings' datatype='integer' name='[PropertyGFABuildings]' role='measure' type='quantitative' />
-      <column caption='Property GFA Parking' datatype='integer' name='[PropertyGFAParking]' role='measure' type='quantitative' />
-      <column caption='Property GFA Total' datatype='integer' name='[PropertyGFATotal]' role='measure' type='quantitative' />
-      <column caption='Second Largest Property Use Type GFA' datatype='integer' name='[SecondLargestPropertyUseTypeGFA]' role='measure' type='quantitative' />
-      <column caption='Second Largest Property Use Type' datatype='string' name='[SecondLargestPropertyUseType]' role='dimension' type='nominal' />
-      <column caption='Self Report GFA Buildings' datatype='integer' name='[SelfReportGFABuildings]' role='measure' type='quantitative' />
-      <column caption='Self Report GFA Total' datatype='integer' name='[SelfReportGFATotal]' role='measure' type='quantitative' />
-      <column caption='Self Report Parking' datatype='integer' name='[SelfReportParking]' role='measure' type='quantitative' />
+      <column caption='Numberof Buildings' datatype='integer' hidden='true' name='[NumberofBuildings]' role='measure' type='quantitative' />
+      <column caption='Numberof Floors' datatype='integer' hidden='true' name='[NumberofFloors]' role='measure' type='quantitative' />
+      <column caption='OSE Building ID' datatype='integer' hidden='true' name='[OSEBuildingID]' role='dimension' type='ordinal' />
+      <column caption='Property GFA Buildings' datatype='integer' hidden='true' name='[PropertyGFABuildings]' role='measure' type='quantitative' />
+      <column caption='Property GFA Parking' datatype='integer' hidden='true' name='[PropertyGFAParking]' role='measure' type='quantitative' />
+      <column caption='Property GFA Total' datatype='integer' hidden='true' name='[PropertyGFATotal]' role='measure' type='quantitative' />
+      <column caption='Second Largest Property Use Type GFA' datatype='integer' hidden='true' name='[SecondLargestPropertyUseTypeGFA]' role='measure' type='quantitative' />
+      <column caption='Second Largest Property Use Type' datatype='string' hidden='true' name='[SecondLargestPropertyUseType]' role='dimension' type='nominal' />
+      <column caption='Self Report GFA Buildings' datatype='integer' hidden='true' name='[SelfReportGFABuildings]' role='measure' type='quantitative' />
+      <column caption='Self Report GFA Total' datatype='integer' hidden='true' name='[SelfReportGFATotal]' role='measure' type='quantitative' />
+      <column caption='Self Report Parking' datatype='integer' hidden='true' name='[SelfReportParking]' role='measure' type='quantitative' />
+      <column datatype='real' hidden='true' name='[SiteEUI(kBtu/sf)]' role='measure' type='quantitative' />
+      <column datatype='real' hidden='true' name='[SiteEUIWN(kBtu/sf)]' role='measure' type='quantitative' />
+      <column datatype='integer' hidden='true' name='[SiteEnergyUse(kBtu)]' role='measure' type='quantitative' />
+      <column datatype='integer' hidden='true' name='[SiteEnergyUseWN(kBtu)]' role='measure' type='quantitative' />
+      <column datatype='real' hidden='true' name='[SourceEUI(kBtu/sf)]' role='measure' type='quantitative' />
+      <column datatype='real' hidden='true' name='[SourceEUIWN(kBtu/sf)]' role='measure' type='quantitative' />
       <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
-      <column caption='Tax Parcel Identification Number' datatype='integer' name='[TaxParcelIdentificationNumber]' role='dimension' type='ordinal' />
-      <column caption='Third Largest Property Use Type GFA' datatype='integer' name='[ThirdLargestPropertyUseTypeGFA]' role='measure' type='quantitative' />
-      <column caption='Third Largest Property Use Type' datatype='string' name='[ThirdLargestPropertyUseType]' role='dimension' type='nominal' />
-      <column caption='Total GHG Emissions' datatype='real' name='[TotalGHGEmissions]' role='measure' type='quantitative' />
-      <column caption='Year Built' datatype='integer' name='[YearBuilt]' role='dimension' type='quantitative' />
+      <column datatype='integer' hidden='true' name='[SteamUse(kBtu)]' role='measure' type='quantitative' />
+      <column caption='Tax Parcel Identification Number' datatype='integer' hidden='true' name='[TaxParcelIdentificationNumber]' role='dimension' type='ordinal' />
+      <column caption='Third Largest Property Use Type GFA' datatype='integer' hidden='true' name='[ThirdLargestPropertyUseTypeGFA]' role='measure' type='quantitative' />
+      <column caption='Third Largest Property Use Type' datatype='string' hidden='true' name='[ThirdLargestPropertyUseType]' role='dimension' type='nominal' />
+      <column caption='Total GHG Emissions' datatype='real' hidden='true' name='[TotalGHGEmissions]' role='measure' type='quantitative' />
+      <column caption='Year Built' datatype='integer' hidden='true' name='[YearBuilt]' role='dimension' type='quantitative' />
       <column aggregation='Sum' caption='Zip Code' datatype='integer' default-format='*00000' name='[ZipCode]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
-      <column caption='Average_Emissions_by_property_type.csv' datatype='table' name='[__tableau_internal_object_id__].[Average_Emissions_by_property_type.csv_5FBE0951F3C34924AB814AFCAC3D58EE]' role='measure' type='quantitative' />
-      <column caption='Average_Emissions_over_ti.csv' datatype='table' name='[__tableau_internal_object_id__].[Average_Emissions_over_ti.csv_D82D2D7FF00E4EBD8361D473A8CB7156]' role='measure' type='quantitative' />
-      <column caption='Average_efficiency_by_property_type.csv' datatype='table' name='[__tableau_internal_object_id__].[Average_efficiency_by_property_type.csv_C2681AFD399E4F7E8A0BD6C1CE7DEC18]' role='measure' type='quantitative' />
-      <column caption='Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv' datatype='table' name='[__tableau_internal_object_id__].[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]' role='measure' type='quantitative' />
-      <column caption='Energy_efficient_buildings.csv' datatype='table' name='[__tableau_internal_object_id__].[Energy_efficient_buildings.csv_7A360E161FBF442C845A8E71D5F77D20]' role='measure' type='quantitative' />
-      <column caption='Energy_inefficient_buildings.csv' datatype='table' name='[__tableau_internal_object_id__].[Energy_inefficient_buildings.csv_56815A83977D45F9B3C8877F80898A17]' role='measure' type='quantitative' />
-      <column caption='energy_trend_over_time.csv' datatype='table' name='[__tableau_internal_object_id__].[energy_trend_over_time.csv_A25EE84EEBEA4B2C8803FF1EAAB6E292]' role='measure' type='quantitative' />
-      <column caption='energy_trend_over_time.csv1' datatype='table' name='[__tableau_internal_object_id__].[energy_trend_over_time.csv_BE9CB880F15646D79783B009A51FE90D]' role='measure' type='quantitative' />
-      <column caption='energy_usage_cleaned.csv' datatype='table' name='[__tableau_internal_object_id__].[energy_usage_cleaned.csv_4FE2C731D99A4C43A403F14EDC46CF2A]' role='measure' type='quantitative' />
+      <column caption='Average_Emissions_by_property_type.csv' datatype='table' hidden='true' name='[__tableau_internal_object_id__].[Average_Emissions_by_property_type.csv_5FBE0951F3C34924AB814AFCAC3D58EE]' role='measure' type='quantitative' />
+      <column caption='Average_Emissions_over_ti.csv' datatype='table' hidden='true' name='[__tableau_internal_object_id__].[Average_Emissions_over_ti.csv_D82D2D7FF00E4EBD8361D473A8CB7156]' role='measure' type='quantitative' />
+      <column caption='Average_efficiency_by_property_type.csv' datatype='table' hidden='true' name='[__tableau_internal_object_id__].[Average_efficiency_by_property_type.csv_C2681AFD399E4F7E8A0BD6C1CE7DEC18]' role='measure' type='quantitative' />
+      <column caption='Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv' datatype='table' hidden='true' name='[__tableau_internal_object_id__].[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]' role='measure' type='quantitative' />
+      <column caption='Energy_efficient_buildings.csv' datatype='table' hidden='true' name='[__tableau_internal_object_id__].[Energy_efficient_buildings.csv_7A360E161FBF442C845A8E71D5F77D20]' role='measure' type='quantitative' />
+      <column caption='Energy_inefficient_buildings.csv' datatype='table' hidden='true' name='[__tableau_internal_object_id__].[Energy_inefficient_buildings.csv_56815A83977D45F9B3C8877F80898A17]' role='measure' type='quantitative' />
+      <column caption='energy_trend_over_time.csv' datatype='table' hidden='true' name='[__tableau_internal_object_id__].[energy_trend_over_time.csv_A25EE84EEBEA4B2C8803FF1EAAB6E292]' role='measure' type='quantitative' />
+      <column caption='energy_trend_over_time.csv1' datatype='table' hidden='true' name='[__tableau_internal_object_id__].[energy_trend_over_time.csv_BE9CB880F15646D79783B009A51FE90D]' role='measure' type='quantitative' />
+      <column caption='energy_usage_cleaned.csv' datatype='table' hidden='true' name='[__tableau_internal_object_id__].[energy_usage_cleaned.csv_4FE2C731D99A4C43A403F14EDC46CF2A]' role='measure' type='quantitative' />
       <column caption='avg eui (Average efficiency by property type.csv)' datatype='real' name='[avg_eui (Average_efficiency_by_property_type.csv)]' role='measure' type='quantitative' />
-      <column caption='Avg Eui (Energy Trend Over Time.Csv1)' datatype='real' name='[avg_eui (energy_trend_over_time.csv1)]' role='measure' type='quantitative' />
+      <column caption='Avg Eui (Energy Trend Over Time.Csv1)' datatype='real' hidden='true' name='[avg_eui (energy_trend_over_time.csv1)]' role='measure' type='quantitative' />
       <column caption='Avg Eui' datatype='real' name='[avg_eui]' role='measure' type='quantitative' />
-      <column caption='building id (Energy efficient buildings.csv)' datatype='integer' name='[building_id (Energy_efficient_buildings.csv)]' role='dimension' type='ordinal' />
-      <column caption='building id (Energy inefficient buildings.csv)' datatype='integer' name='[building_id (Energy_inefficient_buildings.csv)]' role='dimension' type='ordinal' />
-      <column caption='Building Id' datatype='integer' name='[building_id]' role='dimension' type='ordinal' />
-      <column caption='Efficiency Score' datatype='real' name='[efficiency_score]' role='measure' type='quantitative' />
-      <column caption='Electricity Kwh' datatype='real' name='[electricity_kwh]' role='measure' type='quantitative' />
-      <column caption='Gross Floor Area' datatype='integer' name='[gross_floor_area]' role='measure' type='quantitative' />
-      <column caption='property type (Average Emissions by property type.csv)' datatype='string' name='[property_type (Average_Emissions_by_property_type.csv)]' role='dimension' type='nominal' />
-      <column caption='Property Type (Energy Usage Cleaned.Csv)' datatype='string' name='[property_type (energy_usage_cleaned.csv)]' role='dimension' type='nominal' />
+      <column caption='building id (Energy efficient buildings.csv)' datatype='integer' hidden='true' name='[building_id (Energy_efficient_buildings.csv)]' role='dimension' type='ordinal' />
+      <column caption='building id (Energy inefficient buildings.csv)' datatype='integer' hidden='true' name='[building_id (Energy_inefficient_buildings.csv)]' role='dimension' type='ordinal' />
+      <column caption='Building Id' datatype='integer' hidden='true' name='[building_id]' role='dimension' type='ordinal' />
+      <column caption='Efficiency Score' datatype='real' hidden='true' name='[efficiency_score]' role='measure' type='quantitative' />
+      <column caption='Electricity Kwh' datatype='real' hidden='true' name='[electricity_kwh]' role='measure' type='quantitative' />
+      <column caption='Gross Floor Area' datatype='integer' hidden='true' name='[gross_floor_area]' role='measure' type='quantitative' />
+      <column caption='property type (Average Emissions by property type.csv)' datatype='string' hidden='true' name='[property_type (Average_Emissions_by_property_type.csv)]' role='dimension' type='nominal' />
+      <column datatype='string' name='[property_type (Average_efficiency_by_property_type.csv)]' role='dimension' type='nominal' />
+      <column caption='Property Type (Energy Usage Cleaned.Csv)' datatype='string' hidden='true' name='[property_type (energy_usage_cleaned.csv)]' role='dimension' type='nominal' />
       <column caption='Property Type' datatype='string' name='[property_type]' role='dimension' type='nominal' />
-      <column caption='site eui (Energy efficient buildings.csv)' datatype='string' name='[site_eui (Energy_efficient_buildings.csv)]' role='dimension' type='nominal' />
-      <column caption='site eui (Energy inefficient buildings.csv)' datatype='real' name='[site_eui (Energy_inefficient_buildings.csv)]' role='measure' type='quantitative' />
-      <column caption='Site Eui' datatype='real' name='[site_eui]' role='measure' type='quantitative' />
-      <column caption='Source Eui' datatype='real' name='[source_eui]' role='measure' type='quantitative' />
+      <column caption='site eui (Energy efficient buildings.csv)' datatype='string' hidden='true' name='[site_eui (Energy_efficient_buildings.csv)]' role='dimension' type='nominal' />
+      <column caption='site eui (Energy inefficient buildings.csv)' datatype='real' hidden='true' name='[site_eui (Energy_inefficient_buildings.csv)]' role='measure' type='quantitative' />
+      <column caption='Site Eui' datatype='real' hidden='true' name='[site_eui]' role='measure' type='quantitative' />
+      <column caption='Source Eui' datatype='real' hidden='true' name='[source_eui]' role='measure' type='quantitative' />
       <column caption='total emissions (Average Emissions by property type.csv)' datatype='real' name='[total_emissions (Average_Emissions_by_property_type.csv)]' role='measure' type='quantitative' />
-      <column caption='Total Emissions (Energy Usage Cleaned.Csv)' datatype='real' name='[total_emissions (energy_usage_cleaned.csv)]' role='measure' type='quantitative' />
-      <column caption='Year (Energy Trend Over Time.Csv1)' datatype='integer' name='[year (energy_trend_over_time.csv1)]' role='dimension' type='quantitative' />
-      <column caption='Year (Energy Usage Cleaned.Csv)' datatype='integer' name='[year (energy_usage_cleaned.csv)]' role='dimension' type='quantitative' />
+      <column caption='Total Emissions (Energy Usage Cleaned.Csv)' datatype='real' hidden='true' name='[total_emissions (energy_usage_cleaned.csv)]' role='measure' type='quantitative' />
+      <column datatype='integer' hidden='true' name='[year (Average_Emissions_over_ti.csv)]' role='measure' type='quantitative' />
+      <column caption='Year (Energy Trend Over Time.Csv1)' datatype='integer' hidden='true' name='[year (energy_trend_over_time.csv1)]' role='dimension' type='quantitative' />
+      <column caption='Year (Energy Usage Cleaned.Csv)' datatype='integer' hidden='true' name='[year (energy_usage_cleaned.csv)]' role='dimension' type='quantitative' />
       <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
       <column-instance column='[total_emissions (Average_Emissions_by_property_type.csv)]' derivation='Avg' name='[avg:total_emissions (Average_Emissions_by_property_type.csv):qk]' pivot='key' type='quantitative' />
       <column-instance column='[Calculation_1447019321794560]' derivation='None' name='[none:Calculation_1447019321794560:nk]' pivot='key' type='nominal' />
       <column-instance column='[Neighborhood]' derivation='None' name='[none:Neighborhood:nk]' pivot='key' type='nominal' />
+      <column-instance column='[property_type (Average_efficiency_by_property_type.csv)]' derivation='None' name='[none:property_type (Average_efficiency_by_property_type.csv):nk]' pivot='key' type='nominal' />
       <column-instance column='[property_type]' derivation='None' name='[none:property_type:nk]' pivot='key' type='nominal' />
       <column-instance column='[total_emissions (Average_Emissions_by_property_type.csv)]' derivation='None' name='[none:total_emissions (Average_Emissions_by_property_type.csv):qk]' pivot='key' type='quantitative' />
       <column-instance column='[total_emissions (Average_Emissions_by_property_type.csv)]' derivation='Sum' name='[pcto:sum:total_emissions (Average_Emissions_by_property_type.csv):qk]' pivot='key' type='quantitative'>
@@ -1456,7 +1358,7 @@
         </groupfilter>
       </group>
       <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
-        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/y2/rl2xxnnn5vs0rqbyqts6whnc0000gn/T/tableau-temp/#TableauTemp_0noi4kf0xc7una12b1m2h0orf7zl.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/y2/rl2xxnnn5vs0rqbyqts6whnc0000gn/T/tableau-temp/#TableauTemp_1oeojj01swfpjr10i6sp90l9urro.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='04/22/2026 04:19:37 AM' username='tableau_internal_user'>
           <relation type='collection'>
             <relation name='Average_Emissions_over_ti.csv_D82D2D7FF00E4EBD8361D473A8CB7156' table='[Extract].[Average_Emissions_over_ti.csv_D82D2D7FF00E4EBD8361D473A8CB7156]' type='table' />
             <relation name='Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6' table='[Extract].[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]' type='table' />
@@ -1469,81 +1371,32 @@
             <relation name='energy_trend_over_time.csv_BE9CB880F15646D79783B009A51FE90D' table='[Extract].[energy_trend_over_time.csv_BE9CB880F15646D79783B009A51FE90D]' type='table' />
           </relation>
           <cols>
-            <map key='[Address]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[Address]' />
-            <map key='[BuildingName]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[BuildingName]' />
-            <map key='[BuildingType]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[BuildingType]' />
-            <map key='[City]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[City]' />
-            <map key='[ComplianceIssue]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[ComplianceIssue]' />
-            <map key='[ComplianceStatus]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[ComplianceStatus]' />
-            <map key='[CouncilDistrictCode]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[CouncilDistrictCode]' />
-            <map key='[DataYear]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[DataYear]' />
-            <map key='[Demolished]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[Demolished]' />
-            <map key='[ENERGYSTARScore]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[ENERGYSTARScore]' />
-            <map key='[EPAPropertyType]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[EPAPropertyType]' />
-            <map key='[Electricity(kBtu)]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[Electricity(kBtu)]' />
             <map key='[Electricity(kWh)]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[Electricity(kWh)]' />
-            <map key='[GHGEmissionsIntensity]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[GHGEmissionsIntensity]' />
-            <map key='[LargestPropertyUseTypeGFA]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[LargestPropertyUseTypeGFA]' />
-            <map key='[LargestPropertyUseType]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[LargestPropertyUseType]' />
-            <map key='[Latitude]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[Latitude]' />
-            <map key='[Longitude]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[Longitude]' />
-            <map key='[NaturalGas(kBtu)]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[NaturalGas(kBtu)]' />
-            <map key='[NaturalGas(therms)]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[NaturalGas(therms)]' />
             <map key='[Neighborhood]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[Neighborhood]' />
-            <map key='[NumberofBuildings]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[NumberofBuildings]' />
-            <map key='[NumberofFloors]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[NumberofFloors]' />
-            <map key='[OSEBuildingID]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[OSEBuildingID]' />
-            <map key='[PropertyGFABuildings]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[PropertyGFABuildings]' />
-            <map key='[PropertyGFAParking]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[PropertyGFAParking]' />
-            <map key='[PropertyGFATotal]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[PropertyGFATotal]' />
-            <map key='[SecondLargestPropertyUseTypeGFA]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[SecondLargestPropertyUseTypeGFA]' />
-            <map key='[SecondLargestPropertyUseType]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[SecondLargestPropertyUseType]' />
-            <map key='[SelfReportGFABuildings]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[SelfReportGFABuildings]' />
-            <map key='[SelfReportGFATotal]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[SelfReportGFATotal]' />
-            <map key='[SelfReportParking]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[SelfReportParking]' />
             <map key='[SiteEUI(kBtu/sf)]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[SiteEUI(kBtu/sf)]' />
-            <map key='[SiteEUIWN(kBtu/sf)]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[SiteEUIWN(kBtu/sf)]' />
-            <map key='[SiteEnergyUse(kBtu)]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[SiteEnergyUse(kBtu)]' />
-            <map key='[SiteEnergyUseWN(kBtu)]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[SiteEnergyUseWN(kBtu)]' />
-            <map key='[SourceEUI(kBtu/sf)]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[SourceEUI(kBtu/sf)]' />
-            <map key='[SourceEUIWN(kBtu/sf)]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[SourceEUIWN(kBtu/sf)]' />
             <map key='[State]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[State]' />
-            <map key='[SteamUse(kBtu)]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[SteamUse(kBtu)]' />
-            <map key='[TaxParcelIdentificationNumber]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[TaxParcelIdentificationNumber]' />
-            <map key='[ThirdLargestPropertyUseTypeGFA]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[ThirdLargestPropertyUseTypeGFA]' />
-            <map key='[ThirdLargestPropertyUseType]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[ThirdLargestPropertyUseType]' />
             <map key='[TotalGHGEmissions]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[TotalGHGEmissions]' />
-            <map key='[YearBuilt]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[YearBuilt]' />
             <map key='[ZipCode]' value='[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6].[ZipCode]' />
             <map key='[avg_eui (Average_efficiency_by_property_type.csv)]' value='[Average_efficiency_by_property_type.csv_C2681AFD399E4F7E8A0BD6C1CE7DEC18].[avg_eui]' />
-            <map key='[avg_eui (energy_trend_over_time.csv1)]' value='[energy_trend_over_time.csv_BE9CB880F15646D79783B009A51FE90D].[avg_eui]' />
             <map key='[avg_eui]' value='[energy_trend_over_time.csv_A25EE84EEBEA4B2C8803FF1EAAB6E292].[avg_eui]' />
             <map key='[building_id (Energy_efficient_buildings.csv)]' value='[Energy_efficient_buildings.csv_7A360E161FBF442C845A8E71D5F77D20].[building_id]' />
             <map key='[building_id (Energy_inefficient_buildings.csv)]' value='[Energy_inefficient_buildings.csv_56815A83977D45F9B3C8877F80898A17].[building_id]' />
             <map key='[building_id]' value='[energy_usage_cleaned.csv_4FE2C731D99A4C43A403F14EDC46CF2A].[building_id]' />
-            <map key='[efficiency_score]' value='[energy_usage_cleaned.csv_4FE2C731D99A4C43A403F14EDC46CF2A].[efficiency_score]' />
-            <map key='[electricity_kwh]' value='[energy_usage_cleaned.csv_4FE2C731D99A4C43A403F14EDC46CF2A].[electricity_kwh]' />
-            <map key='[gross_floor_area]' value='[energy_usage_cleaned.csv_4FE2C731D99A4C43A403F14EDC46CF2A].[gross_floor_area]' />
             <map key='[property_type (Average_Emissions_by_property_type.csv)]' value='[Average_Emissions_by_property_type.csv_5FBE0951F3C34924AB814AFCAC3D58EE].[property_type]' />
-            <map key='[property_type (energy_usage_cleaned.csv)]' value='[energy_usage_cleaned.csv_4FE2C731D99A4C43A403F14EDC46CF2A].[property_type]' />
-            <map key='[property_type]' value='[Average_efficiency_by_property_type.csv_C2681AFD399E4F7E8A0BD6C1CE7DEC18].[property_type]' />
-            <map key='[site_eui (Energy_efficient_buildings.csv)]' value='[Energy_efficient_buildings.csv_7A360E161FBF442C845A8E71D5F77D20].[site_eui]' />
-            <map key='[site_eui (Energy_inefficient_buildings.csv)]' value='[Energy_inefficient_buildings.csv_56815A83977D45F9B3C8877F80898A17].[site_eui]' />
+            <map key='[property_type (Average_efficiency_by_property_type.csv)]' value='[Average_efficiency_by_property_type.csv_C2681AFD399E4F7E8A0BD6C1CE7DEC18].[property_type]' />
+            <map key='[property_type]' value='[energy_usage_cleaned.csv_4FE2C731D99A4C43A403F14EDC46CF2A].[property_type]' />
             <map key='[site_eui]' value='[energy_usage_cleaned.csv_4FE2C731D99A4C43A403F14EDC46CF2A].[site_eui]' />
-            <map key='[source_eui]' value='[energy_usage_cleaned.csv_4FE2C731D99A4C43A403F14EDC46CF2A].[source_eui]' />
             <map key='[total_emissions (Average_Emissions_by_property_type.csv)]' value='[Average_Emissions_by_property_type.csv_5FBE0951F3C34924AB814AFCAC3D58EE].[total_emissions]' />
-            <map key='[total_emissions (energy_usage_cleaned.csv)]' value='[energy_usage_cleaned.csv_4FE2C731D99A4C43A403F14EDC46CF2A].[total_emissions]' />
             <map key='[total_emissions]' value='[Average_Emissions_over_ti.csv_D82D2D7FF00E4EBD8361D473A8CB7156].[total_emissions]' />
-            <map key='[year (Average_Emissions_over_ti.csv)]' value='[Average_Emissions_over_ti.csv_D82D2D7FF00E4EBD8361D473A8CB7156].[year]' />
+            <map key='[year (energy_trend_over_time.csv)]' value='[energy_trend_over_time.csv_A25EE84EEBEA4B2C8803FF1EAAB6E292].[year]' />
             <map key='[year (energy_trend_over_time.csv1)]' value='[energy_trend_over_time.csv_BE9CB880F15646D79783B009A51FE90D].[year]' />
-            <map key='[year (energy_usage_cleaned.csv)]' value='[energy_usage_cleaned.csv_4FE2C731D99A4C43A403F14EDC46CF2A].[year]' />
-            <map key='[year]' value='[energy_trend_over_time.csv_A25EE84EEBEA4B2C8803FF1EAAB6E292].[year]' />
+            <map key='[year]' value='[Average_Emissions_over_ti.csv_D82D2D7FF00E4EBD8361D473A8CB7156].[year]' />
           </cols>
           <metadata-records>
             <metadata-record class='column'>
               <remote-name>year</remote-name>
               <remote-type>20</remote-type>
-              <local-name>[year (Average_Emissions_over_ti.csv)]</local-name>
+              <local-name>[year]</local-name>
               <parent-name>[Average_Emissions_over_ti.csv_D82D2D7FF00E4EBD8361D473A8CB7156]</parent-name>
               <remote-alias>year</remote-alias>
               <ordinal>0</ordinal>
@@ -1552,6 +1405,7 @@
               <aggregation>Sum</aggregation>
               <approx-count>10</approx-count>
               <contains-null>true</contains-null>
+              <object-id>[Average_Emissions_over_ti.csv_D82D2D7FF00E4EBD8361D473A8CB7156]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>total_emissions</remote-name>
@@ -1565,101 +1419,7 @@
               <aggregation>Sum</aggregation>
               <approx-count>10</approx-count>
               <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>OSEBuildingID</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[OSEBuildingID]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>OSEBuildingID</remote-alias>
-              <ordinal>2</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>6664</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>DataYear</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[DataYear]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>DataYear</remote-alias>
-              <ordinal>3</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>10</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>BuildingName</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[BuildingName]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>BuildingName</remote-alias>
-              <ordinal>4</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>6627</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RUS' />
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>BuildingType</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[BuildingType]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>BuildingType</remote-alias>
-              <ordinal>5</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>8</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RUS' />
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>TaxParcelIdentificationNumber</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[TaxParcelIdentificationNumber]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>TaxParcelIdentificationNumber</remote-alias>
-              <ordinal>6</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>6562</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>Address</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[Address]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>Address</remote-alias>
-              <ordinal>7</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>6664</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RUS' />
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>City</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[City]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>City</remote-alias>
-              <ordinal>8</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>2</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Average_Emissions_over_ti.csv_D82D2D7FF00E4EBD8361D473A8CB7156]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>State</remote-name>
@@ -1667,13 +1427,14 @@
               <local-name>[State]</local-name>
               <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
               <remote-alias>State</remote-alias>
-              <ordinal>9</ordinal>
+              <ordinal>2</ordinal>
               <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
               <local-type>string</local-type>
               <aggregation>Count</aggregation>
               <approx-count>1</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LEN_RUS' />
+              <object-id>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>ZipCode</remote-name>
@@ -1681,38 +1442,13 @@
               <local-name>[ZipCode]</local-name>
               <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
               <remote-alias>ZipCode</remote-alias>
-              <ordinal>10</ordinal>
+              <ordinal>3</ordinal>
               <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
               <local-type>integer</local-type>
               <aggregation>Sum</aggregation>
-              <approx-count>41</approx-count>
+              <approx-count>34</approx-count>
               <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>Latitude</remote-name>
-              <remote-type>5</remote-type>
-              <local-name>[Latitude]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>Latitude</remote-alias>
-              <ordinal>11</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>real</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>5631</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>Longitude</remote-name>
-              <remote-type>5</remote-type>
-              <local-name>[Longitude]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>Longitude</remote-alias>
-              <ordinal>12</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>real</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>5164</approx-count>
-              <contains-null>true</contains-null>
+              <object-id>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>Neighborhood</remote-name>
@@ -1720,169 +1456,14 @@
               <local-name>[Neighborhood]</local-name>
               <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
               <remote-alias>Neighborhood</remote-alias>
-              <ordinal>13</ordinal>
+              <ordinal>4</ordinal>
               <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
               <local-type>string</local-type>
               <aggregation>Count</aggregation>
               <approx-count>13</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LEN_RUS' />
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>CouncilDistrictCode</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[CouncilDistrictCode]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>CouncilDistrictCode</remote-alias>
-              <ordinal>14</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>7</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>YearBuilt</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[YearBuilt]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>YearBuilt</remote-alias>
-              <ordinal>15</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>145</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>NumberofFloors</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[NumberofFloors]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>NumberofFloors</remote-alias>
-              <ordinal>16</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>93</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>NumberofBuildings</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[NumberofBuildings]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>NumberofBuildings</remote-alias>
-              <ordinal>17</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>33</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>PropertyGFATotal</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[PropertyGFATotal]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>PropertyGFATotal</remote-alias>
-              <ordinal>18</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>6113</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>PropertyGFABuildings</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[PropertyGFABuildings]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>PropertyGFABuildings</remote-alias>
-              <ordinal>19</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>6223</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>PropertyGFAParking</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[PropertyGFAParking]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>PropertyGFAParking</remote-alias>
-              <ordinal>20</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>2959</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>SelfReportGFATotal</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[SelfReportGFATotal]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>SelfReportGFATotal</remote-alias>
-              <ordinal>21</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>6148</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>SelfReportGFABuildings</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[SelfReportGFABuildings]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>SelfReportGFABuildings</remote-alias>
-              <ordinal>22</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>6138</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>SelfReportParking</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[SelfReportParking]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>SelfReportParking</remote-alias>
-              <ordinal>23</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>2640</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>ENERGYSTARScore</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[ENERGYSTARScore]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>ENERGYSTARScore</remote-alias>
-              <ordinal>24</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>126</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>SiteEUIWN(kBtu/sf)</remote-name>
-              <remote-type>5</remote-type>
-              <local-name>[SiteEUIWN(kBtu/sf)]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>SiteEUIWN(kBtu/sf)</remote-alias>
-              <ordinal>25</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>real</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>2184</approx-count>
-              <contains-null>true</contains-null>
+              <object-id>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>SiteEUI(kBtu/sf)</remote-name>
@@ -1890,159 +1471,13 @@
               <local-name>[SiteEUI(kBtu/sf)]</local-name>
               <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
               <remote-alias>SiteEUI(kBtu/sf)</remote-alias>
-              <ordinal>26</ordinal>
+              <ordinal>5</ordinal>
               <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
               <local-type>real</local-type>
               <aggregation>Sum</aggregation>
-              <approx-count>1952</approx-count>
+              <approx-count>2236</approx-count>
               <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>SiteEnergyUse(kBtu)</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[SiteEnergyUse(kBtu)]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>SiteEnergyUse(kBtu)</remote-alias>
-              <ordinal>27</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>32489</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>SiteEnergyUseWN(kBtu)</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[SiteEnergyUseWN(kBtu)]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>SiteEnergyUseWN(kBtu)</remote-alias>
-              <ordinal>28</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>32151</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>SourceEUIWN(kBtu/sf)</remote-name>
-              <remote-type>5</remote-type>
-              <local-name>[SourceEUIWN(kBtu/sf)]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>SourceEUIWN(kBtu/sf)</remote-alias>
-              <ordinal>29</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>real</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>3657</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>SourceEUI(kBtu/sf)</remote-name>
-              <remote-type>5</remote-type>
-              <local-name>[SourceEUI(kBtu/sf)]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>SourceEUI(kBtu/sf)</remote-alias>
-              <ordinal>30</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>real</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>3804</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>EPAPropertyType</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[EPAPropertyType]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>EPAPropertyType</remote-alias>
-              <ordinal>31</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>122</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RUS' />
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>LargestPropertyUseType</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[LargestPropertyUseType]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>LargestPropertyUseType</remote-alias>
-              <ordinal>32</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>115</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RUS' />
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>LargestPropertyUseTypeGFA</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[LargestPropertyUseTypeGFA]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>LargestPropertyUseTypeGFA</remote-alias>
-              <ordinal>33</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>7275</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>SecondLargestPropertyUseType</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[SecondLargestPropertyUseType]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>SecondLargestPropertyUseType</remote-alias>
-              <ordinal>34</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>108</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RUS' />
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>SecondLargestPropertyUseTypeGFA</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[SecondLargestPropertyUseTypeGFA]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>SecondLargestPropertyUseTypeGFA</remote-alias>
-              <ordinal>35</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>3912</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>ThirdLargestPropertyUseType</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[ThirdLargestPropertyUseType]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>ThirdLargestPropertyUseType</remote-alias>
-              <ordinal>36</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>57</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RUS' />
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>ThirdLargestPropertyUseTypeGFA</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[ThirdLargestPropertyUseTypeGFA]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>ThirdLargestPropertyUseTypeGFA</remote-alias>
-              <ordinal>37</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>1749</approx-count>
-              <contains-null>true</contains-null>
+              <object-id>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>Electricity(kWh)</remote-name>
@@ -2050,92 +1485,13 @@
               <local-name>[Electricity(kWh)]</local-name>
               <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
               <remote-alias>Electricity(kWh)</remote-alias>
-              <ordinal>38</ordinal>
+              <ordinal>6</ordinal>
               <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
               <local-type>integer</local-type>
               <aggregation>Sum</aggregation>
-              <approx-count>32656</approx-count>
+              <approx-count>30844</approx-count>
               <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>SteamUse(kBtu)</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[SteamUse(kBtu)]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>SteamUse(kBtu)</remote-alias>
-              <ordinal>39</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>1907</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>NaturalGas(therms)</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[NaturalGas(therms)]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>NaturalGas(therms)</remote-alias>
-              <ordinal>40</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>13767</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>ComplianceStatus</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[ComplianceStatus]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>ComplianceStatus</remote-alias>
-              <ordinal>41</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>2</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RUS' />
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>ComplianceIssue</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[ComplianceIssue]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>ComplianceIssue</remote-alias>
-              <ordinal>42</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>18</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RUS' />
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>Electricity(kBtu)</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[Electricity(kBtu)]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>Electricity(kBtu)</remote-alias>
-              <ordinal>43</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>32656</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>NaturalGas(kBtu)</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[NaturalGas(kBtu)]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>NaturalGas(kBtu)</remote-alias>
-              <ordinal>44</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>24936</approx-count>
-              <contains-null>true</contains-null>
+              <object-id>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>TotalGHGEmissions</remote-name>
@@ -2143,38 +1499,13 @@
               <local-name>[TotalGHGEmissions]</local-name>
               <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
               <remote-alias>TotalGHGEmissions</remote-alias>
-              <ordinal>45</ordinal>
+              <ordinal>7</ordinal>
               <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
               <local-type>real</local-type>
               <aggregation>Sum</aggregation>
-              <approx-count>3322</approx-count>
+              <approx-count>3098</approx-count>
               <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>GHGEmissionsIntensity</remote-name>
-              <remote-type>5</remote-type>
-              <local-name>[GHGEmissionsIntensity]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>GHGEmissionsIntensity</remote-alias>
-              <ordinal>46</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>real</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>1089</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>Demolished</remote-name>
-              <remote-type>11</remote-type>
-              <local-name>[Demolished]</local-name>
-              <parent-name>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</parent-name>
-              <remote-alias>Demolished</remote-alias>
-              <ordinal>47</ordinal>
-              <family>Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv</family>
-              <local-type>boolean</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>2</approx-count>
-              <contains-null>true</contains-null>
+              <object-id>[Building_Energy_Benchmarking_Data,_2015-Present_20260416.csv_8E171E113D7441C0B624674B404657B6]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>building_id</remote-name>
@@ -2182,52 +1513,28 @@
               <local-name>[building_id]</local-name>
               <parent-name>[energy_usage_cleaned.csv_4FE2C731D99A4C43A403F14EDC46CF2A]</parent-name>
               <remote-alias>building_id</remote-alias>
-              <ordinal>48</ordinal>
+              <ordinal>8</ordinal>
               <family>energy_usage_cleaned.csv</family>
               <local-type>integer</local-type>
               <aggregation>Sum</aggregation>
-              <approx-count>6436</approx-count>
+              <approx-count>6710</approx-count>
               <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>year</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[year (energy_usage_cleaned.csv)]</local-name>
-              <parent-name>[energy_usage_cleaned.csv_4FE2C731D99A4C43A403F14EDC46CF2A]</parent-name>
-              <remote-alias>year</remote-alias>
-              <ordinal>49</ordinal>
-              <family>energy_usage_cleaned.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>10</approx-count>
-              <contains-null>true</contains-null>
+              <object-id>[energy_usage_cleaned.csv_4FE2C731D99A4C43A403F14EDC46CF2A]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>property_type</remote-name>
               <remote-type>129</remote-type>
-              <local-name>[property_type (energy_usage_cleaned.csv)]</local-name>
+              <local-name>[property_type]</local-name>
               <parent-name>[energy_usage_cleaned.csv_4FE2C731D99A4C43A403F14EDC46CF2A]</parent-name>
               <remote-alias>property_type</remote-alias>
-              <ordinal>50</ordinal>
+              <ordinal>9</ordinal>
               <family>energy_usage_cleaned.csv</family>
               <local-type>string</local-type>
               <aggregation>Count</aggregation>
               <approx-count>8</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LEN_RUS' />
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>gross_floor_area</remote-name>
-              <remote-type>20</remote-type>
-              <local-name>[gross_floor_area]</local-name>
-              <parent-name>[energy_usage_cleaned.csv_4FE2C731D99A4C43A403F14EDC46CF2A]</parent-name>
-              <remote-alias>gross_floor_area</remote-alias>
-              <ordinal>51</ordinal>
-              <family>energy_usage_cleaned.csv</family>
-              <local-type>integer</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>5988</approx-count>
-              <contains-null>true</contains-null>
+              <object-id>[energy_usage_cleaned.csv_4FE2C731D99A4C43A403F14EDC46CF2A]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>site_eui</remote-name>
@@ -2235,64 +1542,13 @@
               <local-name>[site_eui]</local-name>
               <parent-name>[energy_usage_cleaned.csv_4FE2C731D99A4C43A403F14EDC46CF2A]</parent-name>
               <remote-alias>site_eui</remote-alias>
-              <ordinal>52</ordinal>
+              <ordinal>10</ordinal>
               <family>energy_usage_cleaned.csv</family>
               <local-type>real</local-type>
               <aggregation>Sum</aggregation>
-              <approx-count>2171</approx-count>
+              <approx-count>2044</approx-count>
               <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>source_eui</remote-name>
-              <remote-type>5</remote-type>
-              <local-name>[source_eui]</local-name>
-              <parent-name>[energy_usage_cleaned.csv_4FE2C731D99A4C43A403F14EDC46CF2A]</parent-name>
-              <remote-alias>source_eui</remote-alias>
-              <ordinal>53</ordinal>
-              <family>energy_usage_cleaned.csv</family>
-              <local-type>real</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>3743</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>electricity_kwh</remote-name>
-              <remote-type>5</remote-type>
-              <local-name>[electricity_kwh]</local-name>
-              <parent-name>[energy_usage_cleaned.csv_4FE2C731D99A4C43A403F14EDC46CF2A]</parent-name>
-              <remote-alias>electricity_kwh</remote-alias>
-              <ordinal>54</ordinal>
-              <family>energy_usage_cleaned.csv</family>
-              <local-type>real</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>32395</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>total_emissions</remote-name>
-              <remote-type>5</remote-type>
-              <local-name>[total_emissions (energy_usage_cleaned.csv)]</local-name>
-              <parent-name>[energy_usage_cleaned.csv_4FE2C731D99A4C43A403F14EDC46CF2A]</parent-name>
-              <remote-alias>total_emissions</remote-alias>
-              <ordinal>55</ordinal>
-              <family>energy_usage_cleaned.csv</family>
-              <local-type>real</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>3258</approx-count>
-              <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>efficiency_score</remote-name>
-              <remote-type>5</remote-type>
-              <local-name>[efficiency_score]</local-name>
-              <parent-name>[energy_usage_cleaned.csv_4FE2C731D99A4C43A403F14EDC46CF2A]</parent-name>
-              <remote-alias>efficiency_score</remote-alias>
-              <ordinal>56</ordinal>
-              <family>energy_usage_cleaned.csv</family>
-              <local-type>real</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>32283</approx-count>
-              <contains-null>true</contains-null>
+              <object-id>[energy_usage_cleaned.csv_4FE2C731D99A4C43A403F14EDC46CF2A]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>building_id</remote-name>
@@ -2300,26 +1556,13 @@
               <local-name>[building_id (Energy_efficient_buildings.csv)]</local-name>
               <parent-name>[Energy_efficient_buildings.csv_7A360E161FBF442C845A8E71D5F77D20]</parent-name>
               <remote-alias>building_id</remote-alias>
-              <ordinal>57</ordinal>
+              <ordinal>11</ordinal>
               <family>Energy_efficient_buildings.csv</family>
               <local-type>integer</local-type>
               <aggregation>Sum</aggregation>
               <approx-count>10</approx-count>
               <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>site_eui</remote-name>
-              <remote-type>129</remote-type>
-              <local-name>[site_eui (Energy_efficient_buildings.csv)]</local-name>
-              <parent-name>[Energy_efficient_buildings.csv_7A360E161FBF442C845A8E71D5F77D20]</parent-name>
-              <remote-alias>site_eui</remote-alias>
-              <ordinal>58</ordinal>
-              <family>Energy_efficient_buildings.csv</family>
-              <local-type>string</local-type>
-              <aggregation>Count</aggregation>
-              <approx-count>1</approx-count>
-              <contains-null>true</contains-null>
-              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Energy_efficient_buildings.csv_7A360E161FBF442C845A8E71D5F77D20]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>building_id</remote-name>
@@ -2327,38 +1570,27 @@
               <local-name>[building_id (Energy_inefficient_buildings.csv)]</local-name>
               <parent-name>[Energy_inefficient_buildings.csv_56815A83977D45F9B3C8877F80898A17]</parent-name>
               <remote-alias>building_id</remote-alias>
-              <ordinal>59</ordinal>
+              <ordinal>12</ordinal>
               <family>Energy_inefficient_buildings.csv</family>
               <local-type>integer</local-type>
               <aggregation>Sum</aggregation>
               <approx-count>8</approx-count>
               <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>site_eui</remote-name>
-              <remote-type>5</remote-type>
-              <local-name>[site_eui (Energy_inefficient_buildings.csv)]</local-name>
-              <parent-name>[Energy_inefficient_buildings.csv_56815A83977D45F9B3C8877F80898A17]</parent-name>
-              <remote-alias>site_eui</remote-alias>
-              <ordinal>60</ordinal>
-              <family>Energy_inefficient_buildings.csv</family>
-              <local-type>real</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>10</approx-count>
-              <contains-null>true</contains-null>
+              <object-id>[Energy_inefficient_buildings.csv_56815A83977D45F9B3C8877F80898A17]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>year</remote-name>
               <remote-type>20</remote-type>
-              <local-name>[year]</local-name>
+              <local-name>[year (energy_trend_over_time.csv)]</local-name>
               <parent-name>[energy_trend_over_time.csv_A25EE84EEBEA4B2C8803FF1EAAB6E292]</parent-name>
               <remote-alias>year</remote-alias>
-              <ordinal>61</ordinal>
+              <ordinal>13</ordinal>
               <family>energy_trend_over_time.csv</family>
               <local-type>integer</local-type>
               <aggregation>Sum</aggregation>
               <approx-count>10</approx-count>
               <contains-null>true</contains-null>
+              <object-id>[energy_trend_over_time.csv_A25EE84EEBEA4B2C8803FF1EAAB6E292]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>avg_eui</remote-name>
@@ -2366,26 +1598,28 @@
               <local-name>[avg_eui]</local-name>
               <parent-name>[energy_trend_over_time.csv_A25EE84EEBEA4B2C8803FF1EAAB6E292]</parent-name>
               <remote-alias>avg_eui</remote-alias>
-              <ordinal>62</ordinal>
+              <ordinal>14</ordinal>
               <family>energy_trend_over_time.csv</family>
               <local-type>real</local-type>
               <aggregation>Sum</aggregation>
               <approx-count>10</approx-count>
               <contains-null>true</contains-null>
+              <object-id>[energy_trend_over_time.csv_A25EE84EEBEA4B2C8803FF1EAAB6E292]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>property_type</remote-name>
               <remote-type>129</remote-type>
-              <local-name>[property_type]</local-name>
+              <local-name>[property_type (Average_efficiency_by_property_type.csv)]</local-name>
               <parent-name>[Average_efficiency_by_property_type.csv_C2681AFD399E4F7E8A0BD6C1CE7DEC18]</parent-name>
               <remote-alias>property_type</remote-alias>
-              <ordinal>63</ordinal>
+              <ordinal>15</ordinal>
               <family>Average_efficiency_by_property_type.csv</family>
               <local-type>string</local-type>
               <aggregation>Count</aggregation>
               <approx-count>8</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LEN_RUS' />
+              <object-id>[Average_efficiency_by_property_type.csv_C2681AFD399E4F7E8A0BD6C1CE7DEC18]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>avg_eui</remote-name>
@@ -2393,12 +1627,13 @@
               <local-name>[avg_eui (Average_efficiency_by_property_type.csv)]</local-name>
               <parent-name>[Average_efficiency_by_property_type.csv_C2681AFD399E4F7E8A0BD6C1CE7DEC18]</parent-name>
               <remote-alias>avg_eui</remote-alias>
-              <ordinal>64</ordinal>
+              <ordinal>16</ordinal>
               <family>Average_efficiency_by_property_type.csv</family>
               <local-type>real</local-type>
               <aggregation>Sum</aggregation>
               <approx-count>8</approx-count>
               <contains-null>true</contains-null>
+              <object-id>[Average_efficiency_by_property_type.csv_C2681AFD399E4F7E8A0BD6C1CE7DEC18]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>property_type</remote-name>
@@ -2406,13 +1641,14 @@
               <local-name>[property_type (Average_Emissions_by_property_type.csv)]</local-name>
               <parent-name>[Average_Emissions_by_property_type.csv_5FBE0951F3C34924AB814AFCAC3D58EE]</parent-name>
               <remote-alias>property_type</remote-alias>
-              <ordinal>65</ordinal>
+              <ordinal>17</ordinal>
               <family>Average_Emissions_by_property_type.csv</family>
               <local-type>string</local-type>
               <aggregation>Count</aggregation>
               <approx-count>8</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LEN_RUS' />
+              <object-id>[Average_Emissions_by_property_type.csv_5FBE0951F3C34924AB814AFCAC3D58EE]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>total_emissions</remote-name>
@@ -2420,12 +1656,13 @@
               <local-name>[total_emissions (Average_Emissions_by_property_type.csv)]</local-name>
               <parent-name>[Average_Emissions_by_property_type.csv_5FBE0951F3C34924AB814AFCAC3D58EE]</parent-name>
               <remote-alias>total_emissions</remote-alias>
-              <ordinal>66</ordinal>
+              <ordinal>18</ordinal>
               <family>Average_Emissions_by_property_type.csv</family>
               <local-type>real</local-type>
               <aggregation>Sum</aggregation>
               <approx-count>8</approx-count>
               <contains-null>true</contains-null>
+              <object-id>[Average_Emissions_by_property_type.csv_5FBE0951F3C34924AB814AFCAC3D58EE]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>year</remote-name>
@@ -2433,25 +1670,13 @@
               <local-name>[year (energy_trend_over_time.csv1)]</local-name>
               <parent-name>[energy_trend_over_time.csv_BE9CB880F15646D79783B009A51FE90D]</parent-name>
               <remote-alias>year</remote-alias>
-              <ordinal>67</ordinal>
+              <ordinal>19</ordinal>
               <family>energy_trend_over_time.csv1</family>
               <local-type>integer</local-type>
               <aggregation>Sum</aggregation>
               <approx-count>10</approx-count>
               <contains-null>true</contains-null>
-            </metadata-record>
-            <metadata-record class='column'>
-              <remote-name>avg_eui</remote-name>
-              <remote-type>5</remote-type>
-              <local-name>[avg_eui (energy_trend_over_time.csv1)]</local-name>
-              <parent-name>[energy_trend_over_time.csv_BE9CB880F15646D79783B009A51FE90D]</parent-name>
-              <remote-alias>avg_eui</remote-alias>
-              <ordinal>68</ordinal>
-              <family>energy_trend_over_time.csv1</family>
-              <local-type>real</local-type>
-              <aggregation>Sum</aggregation>
-              <approx-count>10</approx-count>
-              <contains-null>true</contains-null>
+              <object-id>[energy_trend_over_time.csv_BE9CB880F15646D79783B009A51FE90D]</object-id>
             </metadata-record>
           </metadata-records>
         </connection>
@@ -2471,6 +1696,9 @@
             </map>
           </encoding>
           <encoding attr='color' field='[none:property_type:nk]' palette='greens' type='palette'>
+            <map to='#112409'>
+              <bucket>%null%</bucket>
+            </map>
             <map to='#112409'>
               <bucket>&quot;Campus&quot;</bucket>
             </map>
@@ -2502,6 +1730,9 @@
             </map>
             <map to='#f28e2b'>
               <bucket>&quot;[federated.06ibob20hh56tq1e05lhz0id2qcw].[none:Neighborhood:nk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.06ibob20hh56tq1e05lhz0id2qcw].[none:property_type (Average_efficiency_by_property_type.csv):nk]&quot;</bucket>
             </map>
             <map to='#f28e2b'>
               <bucket>&quot;[federated.06ibob20hh56tq1e05lhz0id2qcw].[none:property_type:nk]&quot;</bucket>
@@ -2561,6 +1792,32 @@
             </map>
             <map to='#ecffed'>
               <bucket>&quot;DOWNTOWN&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:property_type (Average_efficiency_by_property_type.csv):nk]' palette='greens' type='palette'>
+            <map to='#112409'>
+              <bucket>&quot;Campus&quot;</bucket>
+            </map>
+            <map to='#1d3d0f'>
+              <bucket>&quot;Multifamily HR (10+)&quot;</bucket>
+            </map>
+            <map to='#517930'>
+              <bucket>&quot;Multifamily LR (1-4)&quot;</bucket>
+            </map>
+            <map to='#6da140'>
+              <bucket>&quot;Multifamily MR (5-9)&quot;</bucket>
+            </map>
+            <map to='#8bcb47'>
+              <bucket>&quot;Nonresidential COS&quot;</bucket>
+            </map>
+            <map to='#90c377'>
+              <bucket>&quot;NonResidential&quot;</bucket>
+            </map>
+            <map to='#bbfd9a'>
+              <bucket>&quot;Nonresidential WA&quot;</bucket>
+            </map>
+            <map to='#e0ffc9'>
+              <bucket>&quot;SPS-District K-12&quot;</bucket>
             </map>
           </encoding>
         </style-rule>
@@ -2742,7 +1999,7 @@
         <relationships>
           <relationship>
             <expression op='='>
-              <expression op='[property_type]' />
+              <expression op='[property_type (Average_efficiency_by_property_type.csv)]' />
               <expression op='[property_type (Average_Emissions_by_property_type.csv)]' />
             </expression>
             <first-end-point object-id='Average_efficiency_by_property_type.csv_C2681AFD399E4F7E8A0BD6C1CE7DEC18' />
@@ -2782,15 +2039,15 @@
           </relationship>
           <relationship>
             <expression op='='>
-              <expression op='[year (Average_Emissions_over_ti.csv)]' />
               <expression op='[year]' />
+              <expression op='[year (energy_trend_over_time.csv)]' />
             </expression>
             <first-end-point object-id='Average_Emissions_over_ti.csv_D82D2D7FF00E4EBD8361D473A8CB7156' />
             <second-end-point object-id='energy_trend_over_time.csv_A25EE84EEBEA4B2C8803FF1EAAB6E292' />
           </relationship>
           <relationship>
             <expression op='='>
-              <expression op='[year]' />
+              <expression op='[year (energy_trend_over_time.csv)]' />
               <expression op='[year (energy_trend_over_time.csv1)]' />
             </expression>
             <first-end-point object-id='energy_trend_over_time.csv_A25EE84EEBEA4B2C8803FF1EAAB6E292' />
@@ -2916,12 +2173,11 @@
             </column>
             <column caption='avg eui (Average efficiency by property type.csv)' datatype='real' name='[avg_eui (Average_efficiency_by_property_type.csv)]' role='measure' type='quantitative' />
             <column-instance column='[Calculation_1447019321794560]' derivation='None' name='[none:Calculation_1447019321794560:nk]' pivot='key' type='nominal' />
-            <column-instance column='[property_type]' derivation='None' name='[none:property_type:nk]' pivot='key' type='nominal' />
-            <column caption='Property Type' datatype='string' name='[property_type]' role='dimension' type='nominal' />
+            <column-instance column='[property_type (Average_efficiency_by_property_type.csv)]' derivation='None' name='[none:property_type (Average_efficiency_by_property_type.csv):nk]' pivot='key' type='nominal' />
+            <column datatype='string' name='[property_type (Average_efficiency_by_property_type.csv)]' role='dimension' type='nominal' />
             <column-instance column='[avg_eui (Average_efficiency_by_property_type.csv)]' derivation='Sum' name='[sum:avg_eui (Average_efficiency_by_property_type.csv):qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
           <natural-sort column='[federated.06ibob20hh56tq1e05lhz0id2qcw].[none:Calculation_1447019321794560:nk]' direction='DESC' />
-          <computed-sort column='[federated.06ibob20hh56tq1e05lhz0id2qcw].[none:property_type:nk]' direction='DESC' using='[federated.06ibob20hh56tq1e05lhz0id2qcw].[sum:avg_eui (Average_efficiency_by_property_type.csv):qk]' />
           <hide-sort-controls />
           <aggregation value='true' />
         </view>
@@ -2929,9 +2185,6 @@
           <style-rule element='axis'>
             <format attr='height' field='[federated.06ibob20hh56tq1e05lhz0id2qcw].[sum:avg_eui (Average_efficiency_by_property_type.csv):qk]' value='43' />
             <format attr='title' class='0' field='[federated.06ibob20hh56tq1e05lhz0id2qcw].[sum:avg_eui (Average_efficiency_by_property_type.csv):qk]' scope='cols' value='Average Energy Use (kBtu/sk)' />
-          </style-rule>
-          <style-rule element='cell'>
-            <format attr='height' field='[federated.06ibob20hh56tq1e05lhz0id2qcw].[none:property_type:nk]' value='23' />
           </style-rule>
         </style>
         <panes>
@@ -2951,7 +2204,7 @@
             </style>
           </pane>
         </panes>
-        <rows>[federated.06ibob20hh56tq1e05lhz0id2qcw].[none:property_type:nk]</rows>
+        <rows>[federated.06ibob20hh56tq1e05lhz0id2qcw].[none:property_type (Average_efficiency_by_property_type.csv):nk]</rows>
         <cols>[federated.06ibob20hh56tq1e05lhz0id2qcw].[sum:avg_eui (Average_efficiency_by_property_type.csv):qk]</cols>
       </table>
       <simple-id uuid='{E578A047-E6AA-4240-AB66-5257BCE51309}' />
@@ -2971,11 +2224,11 @@
             <datasource caption='Average_efficiency_by_property_type' name='federated.06ibob20hh56tq1e05lhz0id2qcw' />
           </datasources>
           <datasource-dependencies datasource='federated.06ibob20hh56tq1e05lhz0id2qcw'>
-            <column-instance column='[property_type]' derivation='None' name='[none:property_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[property_type (Average_efficiency_by_property_type.csv)]' derivation='None' name='[none:property_type (Average_efficiency_by_property_type.csv):nk]' pivot='key' type='nominal' />
             <column-instance column='[total_emissions (Average_Emissions_by_property_type.csv)]' derivation='Sum' name='[pcto:sum:total_emissions (Average_Emissions_by_property_type.csv):qk]' pivot='key' type='quantitative'>
               <table-calc ordering-type='Rows' type='PctTotal' />
             </column-instance>
-            <column caption='Property Type' datatype='string' name='[property_type]' role='dimension' type='nominal' />
+            <column datatype='string' name='[property_type (Average_efficiency_by_property_type.csv)]' role='dimension' type='nominal' />
             <column-instance column='[total_emissions (Average_Emissions_by_property_type.csv)]' derivation='Sum' name='[sum:total_emissions (Average_Emissions_by_property_type.csv):qk]' pivot='key' type='quantitative' />
             <column caption='total emissions (Average Emissions by property type.csv)' datatype='real' name='[total_emissions (Average_Emissions_by_property_type.csv)]' role='measure' type='quantitative' />
           </datasource-dependencies>
@@ -2994,10 +2247,10 @@
             <mark class='Pie' />
             <mark-sizing mark-sizing-setting='marks-scaling-off' />
             <encodings>
-              <color column='[federated.06ibob20hh56tq1e05lhz0id2qcw].[none:property_type:nk]' />
+              <color column='[federated.06ibob20hh56tq1e05lhz0id2qcw].[none:property_type (Average_efficiency_by_property_type.csv):nk]' />
               <size column='[federated.06ibob20hh56tq1e05lhz0id2qcw].[sum:total_emissions (Average_Emissions_by_property_type.csv):qk]' />
-              <text column='[federated.06ibob20hh56tq1e05lhz0id2qcw].[none:property_type:nk]' />
               <text column='[federated.06ibob20hh56tq1e05lhz0id2qcw].[pcto:sum:total_emissions (Average_Emissions_by_property_type.csv):qk]' />
+              <text column='[federated.06ibob20hh56tq1e05lhz0id2qcw].[none:property_type (Average_efficiency_by_property_type.csv):nk]' />
             </encodings>
             <style>
               <style-rule element='mark'>
@@ -3228,49 +2481,36 @@
       <size maxheight='854' maxwidth='1300' minheight='754' minwidth='1200' sizing-mode='range' />
       <zones>
         <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
-          <zone h='98022' id='35' param='horz' type-v2='layout-flow' w='98726' x='637' y='989'>
-            <zone h='98022' id='32' param='horz' type-v2='layout-flow' w='98726' x='637' y='989'>
-              <zone h='98022' id='30' type-v2='layout-basic' w='98726' x='637' y='989'>
-                <zone h='88725' id='18' param='horz' type-v2='layout-flow' w='33768' x='637' y='10286'>
-                  <zone h='88725' id='16' type-v2='layout-basic' w='33768' x='637' y='10286'>
-                    <zone h='88725' id='13' param='horz' type-v2='layout-flow' w='33768' x='637' y='10286'>
-                      <zone h='88725' id='20' param='horz' type-v2='layout-flow' w='33768' x='637' y='10286'>
-                        <zone h='88725' id='21' param='vert' type-v2='layout-flow' w='33768' x='637' y='10286'>
-                          <zone fixed-size='353' h='44362' id='12' is-fixed='true' name='Sheet 2' w='33768' x='637' y='10286'>
-                            <layout-cache minheight='315' minwidth='176' type-h='scalable' type-w='scalable' />
-                            <zone-style>
-                              <format attr='border-color' value='#000000' />
-                              <format attr='border-style' value='none' />
-                              <format attr='border-width' value='0' />
-                              <format attr='margin' value='4' />
-                            </zone-style>
-                          </zone>
-                          <zone fixed-size='406' h='44363' id='22' is-fixed='true' name='Sheet 3' w='33768' x='637' y='54648'>
-                            <layout-cache minwidth='240' type-h='cell' type-w='scalable' />
-                            <zone-style>
-                              <format attr='border-color' value='#000000' />
-                              <format attr='border-style' value='none' />
-                              <format attr='border-width' value='0' />
-                              <format attr='margin' value='4' />
-                            </zone-style>
-                          </zone>
-                        </zone>
+          <zone h='97984' id='35' param='horz' type-v2='layout-flow' w='98684' x='658' y='1008'>
+            <zone h='97984' id='30' type-v2='layout-basic' w='98684' x='658' y='1008'>
+              <zone h='88690' id='18' param='horz' type-v2='layout-flow' w='33753' x='658' y='10302'>
+                <zone h='88690' id='16' type-v2='layout-basic' w='33753' x='658' y='10302'>
+                  <zone h='88690' id='13' param='horz' type-v2='layout-flow' w='33753' x='658' y='10302'>
+                    <zone h='88690' id='21' param='vert' type-v2='layout-flow' w='33753' x='658' y='10302'>
+                      <zone fixed-size='353' h='44345' id='12' is-fixed='true' name='Sheet 2' w='33753' x='658' y='10302'>
+                        <layout-cache minheight='315' minwidth='176' type-h='scalable' type-w='scalable' />
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='none' />
+                          <format attr='border-width' value='0' />
+                          <format attr='margin' value='4' />
+                        </zone-style>
+                      </zone>
+                      <zone fixed-size='406' h='44345' id='22' is-fixed='true' name='Sheet 3' w='33753' x='658' y='54647'>
+                        <layout-cache minwidth='180' type-h='cell' type-w='scalable' />
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='none' />
+                          <format attr='border-width' value='0' />
+                          <format attr='margin' value='4' />
+                        </zone-style>
                       </zone>
                     </zone>
                   </zone>
                 </zone>
-                <zone h='9297' id='27' param='horz' type-v2='layout-flow' w='98726' x='637' y='989'>
-                  <zone fixed-size='108' h='5933' id='10' is-fixed='true' type-v2='title' w='98726' x='637' y='989'>
-                    <zone-style>
-                      <format attr='border-color' value='#000000' />
-                      <format attr='border-style' value='none' />
-                      <format attr='border-width' value='0' />
-                      <format attr='margin' value='4' />
-                    </zone-style>
-                  </zone>
-                </zone>
-                <zone fixed-size='290' h='43557' id='24' is-fixed='true' name='Sheet 4' w='33355' x='66008' y='10286'>
-                  <layout-cache cell-count-w='1' type-h='cell' type-w='cell' />
+              </zone>
+              <zone h='9294' id='27' param='horz' type-v2='layout-flow' w='98684' x='658' y='1008'>
+                <zone fixed-size='108' h='6045' id='10' is-fixed='true' type-v2='title' w='98684' x='658' y='1008'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -3278,23 +2518,32 @@
                     <format attr='margin' value='4' />
                   </zone-style>
                 </zone>
-                <zone h='45168' id='33' name='Sheet 4 (2)' w='33355' x='66008' y='53843'>
-                  <zone-style>
-                    <format attr='border-color' value='#000000' />
-                    <format attr='border-style' value='none' />
-                    <format attr='border-width' value='0' />
-                    <format attr='margin' value='4' />
-                  </zone-style>
-                </zone>
-                <zone h='88725' id='15' name='Sheet 5' w='31603' x='34405' y='10286'>
-                  <layout-cache minheight='258' type-h='scalable' type-w='fixed' />
-                  <zone-style>
-                    <format attr='border-color' value='#000000' />
-                    <format attr='border-style' value='none' />
-                    <format attr='border-width' value='0' />
-                    <format attr='margin' value='4' />
-                  </zone-style>
-                </zone>
+              </zone>
+              <zone fixed-size='290' h='43540' id='24' is-fixed='true' name='Sheet 4' w='33342' x='66000' y='10302'>
+                <layout-cache cell-count-w='1' type-h='cell' type-w='cell' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='45150' id='33' name='Sheet 4 (2)' w='33342' x='66000' y='53842'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='88690' id='15' name='Sheet 5' w='31589' x='34411' y='10302'>
+                <layout-cache minheight='258' type-h='scalable' type-w='fixed' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
               </zone>
             </zone>
           </zone>
@@ -3318,9 +2567,9 @@
           </layout-options>
           <size maxheight='1550' minheight='1550' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='47' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97878' id='46' param='vert' type-v2='layout-flow' w='98710' x='645' y='1061'>
-                <zone fixed-size='108' h='6366' id='10' type-v2='title' w='98710' x='645' y='1061'>
+            <zone h='100000' id='57' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97878' id='56' param='vert' type-v2='layout-flow' w='98666' x='667' y='1061'>
+                <zone fixed-size='108' h='6366' id='10' type-v2='title' w='98666' x='667' y='1061'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -3329,7 +2578,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='44297' id='12' is-fixed='true' name='Sheet 2' w='33763' x='645' y='10345'>
+                <zone fixed-size='280' h='44297' id='12' is-fixed='true' name='Sheet 2' w='33747' x='667' y='10345'>
                   <layout-cache minheight='315' minwidth='176' type-h='scalable' type-w='scalable' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -3339,7 +2588,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='88594' id='15' is-fixed='true' name='Sheet 5' w='31598' x='34408' y='10345'>
+                <zone fixed-size='280' h='88594' id='15' is-fixed='true' name='Sheet 5' w='31584' x='34414' y='10345'>
                   <layout-cache minheight='258' type-h='scalable' type-w='fixed' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -3349,7 +2598,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='43493' id='24' is-fixed='true' name='Sheet 4' w='33349' x='66006' y='10345'>
+                <zone fixed-size='280' h='43493' id='24' is-fixed='true' name='Sheet 4' w='33335' x='65998' y='10345'>
                   <layout-cache cell-count-w='1' type-h='cell' type-w='cell' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -3359,7 +2608,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='45101' id='33' is-fixed='true' name='Sheet 4 (2)' w='33349' x='66006' y='53838'>
+                <zone fixed-size='280' h='45101' id='33' is-fixed='true' name='Sheet 4 (2)' w='33335' x='65998' y='53838'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -3368,7 +2617,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='44297' id='22' is-fixed='true' name='Sheet 3' w='33763' x='645' y='54642'>
+                <zone fixed-size='280' h='44297' id='22' is-fixed='true' name='Sheet 3' w='33747' x='667' y='54642'>
                   <layout-cache minwidth='240' type-h='cell' type-w='scalable' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -3392,7 +2641,7 @@
       <simple-id uuid='{7466AF55-525E-41E8-BBD2-66A37C1C79D5}' />
     </dashboard>
   </dashboards>
-  <windows pres-mode='true' source-height='51'>
+  <windows source-height='30'>
     <window class='worksheet' name='Sheet 2'>
       <cards>
         <edge name='left'>
@@ -3465,7 +2714,7 @@
         <edge name='right'>
           <strip size='160'>
             <card param='[federated.06ibob20hh56tq1e05lhz0id2qcw].[pcto:sum:total_emissions (Average_Emissions_by_property_type.csv):qk]' show-domain='false' show-null-ctrls='false' type='filter' />
-            <card pane-specification-id='0' param='[federated.06ibob20hh56tq1e05lhz0id2qcw].[none:property_type:nk]' type='color' />
+            <card pane-specification-id='0' param='[federated.06ibob20hh56tq1e05lhz0id2qcw].[none:property_type (Average_efficiency_by_property_type.csv):nk]' type='color' />
             <card pane-specification-id='0' param='[federated.06ibob20hh56tq1e05lhz0id2qcw].[sum:total_emissions (Average_Emissions_by_property_type.csv):qk]' type='size' />
           </strip>
         </edge>
@@ -3555,7 +2804,7 @@
           <default-map-unit-selection mapunit='2' />
         </viewpoint>
       </viewpoints>
-      <active id='10' />
+      <active id='15' />
       <device-preview visible='true' />
       <simple-id uuid='{B370D896-D030-487E-8860-F763ECBD1CDE}' />
     </window>
@@ -3589,4 +2838,10 @@
       <simple-id uuid='{F3EAC842-7E8C-42F1-92AE-01716A47618B}' />
     </window>
   </windows>
+  <workbook-optimizer>
+    <rule-config>
+      <rule ignored='true' ruleID='11' />
+      <rule ignored='true' ruleID='15' />
+    </rule-config>
+  </workbook-optimizer>
 </workbook>
